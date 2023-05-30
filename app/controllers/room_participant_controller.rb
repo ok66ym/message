@@ -1,0 +1,2 @@
+class RoomParticipantController < ApplicationController
+end

@@ -1,0 +1,24 @@
+<div class="chat-new-room">
+  <h1>新規グループ作成</h1>
+  <%= link_to "マイページへ", current_user %>
+</div>
+
+<div class="new-top-chat">
+  <%= link_to "グルチャトップページへ", rooms_path %>
+</div>
+
+<div class="chat-room-new">
+<h5>#すでに使われているグループ名は使用できません。</h5>
+<h5>#グループに参加する際は自身のユーザー名にチェックを入れてください</h5>
+<%= form_with(model: @room, local: true) do |f| %>
+  <div class="group-new-form">
+    <div class="group-new-form-name">
+      <%= f.label :roomname, 'チャットグループ名' %>
+      <%= f.text_field :roomname, class: 'form-control' %>
+      <div class="participant-new">
+      <%= f.collection_check_boxes :user_ids, User.all, :id, :name %>
+    </div>
+    <%= f.submit '新規作成', class: "btn btn-promary" %>
+  </div>
+<% end %>
+</div>

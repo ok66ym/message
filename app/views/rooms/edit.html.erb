@@ -1,0 +1,25 @@
+<div class="room-edit">
+  <h1>グループ参加</h1>
+
+  <%= link_to "マイページへ", current_user %>
+</div>
+
+<div class="edit-top-chat">
+  <%= link_to "グルチャトップページへ", rooms_path %>
+</div>
+
+<div class="edit-form">
+<p>#グループに参加する際は自身のユーザー名にチェックを入れてください</p>
+<%= form_with(model: @room, local: true) do |f| %>
+  <div class="group-new-form">
+    <div class="group-new-form-name">
+      <%= f.label :roomname, 'グループ名' %>
+      <%= f.text_field :roomname, class: 'form-control' %>
+      <div class="participant">
+      <%= f.collection_check_boxes :user_ids, User.all, :id, :name %>
+      </div>
+    </div>
+    <%= f.submit '参加する', class: "btn btn-promary" %>
+  </div>
+<% end %>
+</div>

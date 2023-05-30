@@ -1,0 +1,43 @@
+<div class="chat-show">
+  <h1>トークルーム</h1>
+  <div class="chat-show-user">
+  <%= link_to 'ユーザーページへ', current_user %>
+  </div>
+</div>
+
+<div class="evening-image">
+<div class="room-show">
+      <span class="group-room-group-chat-back">
+        <%= link_to rooms_path do %>
+        <h4>グルチャトップページに戻る</h4>
+        <% end %>
+      </span>
+</div>
+
+<div class="chat-room-show-talk">
+<div class="comment-wrapper">
+  <div class="comment-chat-show">
+    <% @responses.each do |c| %>
+      <div>
+        <%= c.user.name unless c.user.blank? %>
+        <br>
+        <%= c.content %>
+      </div>
+        <br>
+    <% end %>
+  </div>
+
+<div class="comment-select">
+  <% if @room.user_ids.include?(current_user.id) %>
+    <% if user_signed_in? %>
+      <%= form_with(model: [@room, @response], local: true) do |f| %>
+        <%= f.text_area :content %>
+        <%= button_tag type: "submit" do %>
+          <i class="far fa-responses"></i> 送信する
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
+</div>
+</div>

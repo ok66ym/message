@@ -1,0 +1,17 @@
+<div class="star-image">
+          <div class="header-list">
+            <div class="title">
+              みんログ
+            </div>
+            <div class="new-top-all">
+              <%= link_to "新規登録", new_user_registration_path %>
+            </div>
+            <div class="login">
+              <%= link_to "ログイン", posts_path %>
+            </div>
+          </div>
+      <div class="top-page">
+                <%= link_to "Q&A", posts_path, class: "toppage-qa" %>
+                <%= link_to "チャットルーム", rooms_path, class: "toppage-chat" %>
+      </div>
+</div>

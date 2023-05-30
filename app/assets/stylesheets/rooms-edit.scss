@@ -1,0 +1,73 @@
+.room-edit {
+  background-color: #FFAF3B;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+}
+.room-edit a {
+  text-decoration: none;
+  color: black;
+  padding-right: 30px;
+}
+.room-edit a:hover {
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+.edit-top-chat {
+  border: 1px solid;
+  border-color: #707070;
+  padding-right: 30px;
+}
+.edit-top-chat a {
+  text-decoration: none;
+  color: black;
+  padding-left: 30px;
+}
+.edit-top-chat a:hover {
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+.edit-form {
+  border: 1px solid;
+  border-color: #707070;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  min-height: 90px;
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 5px #c7c7c7;
+  margin-bottom: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.edit-form p {
+  border: 1px solid;
+  border-color: #707070;
+  border-radius: 10px;
+  margin-right: 500px;
+}
+.group-new-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+.group-new-form-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.participant {
+  border: 1px solid;
+  border-color: #707070;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 10px;
+}

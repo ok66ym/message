@@ -1,0 +1,49 @@
+
+    <div class="chat-header">
+    <h1>グルチャトップページ</h1>
+    <div class="chat-top-user">
+        <%= link_to "トップページへ", root_path %>
+        <%= link_to 'ユーザーページへ', current_user %>
+    </div>
+    </div>
+<div class="evening-image">
+<div class="chat-group">
+    <div class="search-new-chat">
+    <div class="search-chat">
+        <%= form_tag({controller:"rooms",action:"index"}, method: :get) do %>
+        <%= text_field_tag :search %>
+        <%= submit_tag '検索する' %>
+    <% end %>
+    </div>
+        <div class="group-new">
+            <%= link_to '新規チャットグループを作成する', new_room_path %>
+        </div>
+    </div>
+
+<p>＃作成されたグループ一覧を表示する際は空白のまま検索ボタンを押す</p>
+
+<div class="group-all">
+<h3>現在作成されているグループ</h3>
+<p>#グループに参加するには”参加する”→”自身のユーザー名にチェックを入れる”</p>
+        <% if @room_joining == [] %>
+            <%= @room_lists_none %>
+        <% else %>
+            <div class="group-list">
+                <div class="group-list-table">
+                      <% @room_lists.each do |list| %>
+                          <%#= if list.user_ids.include?(current_user.id) %>
+                              <div class="group-list-table-each-group">
+                                  <%= link_to "/rooms/#{list.id}" do %>
+                                      <%= list.roomname %>(<%= list.user_ids.count %>)
+                                        <%= link_to '参加する', edit_room_path(list.id), method: :get %>
+                                        <%= link_to '削除', room_path(list.id), method: :delete %>
+                                  <% end %>
+                              </div>
+                          <%#= end %>
+                      <% end %>
+                </div>
+            </div>
+        <% end %>
+</div>
+</div>
+</div>

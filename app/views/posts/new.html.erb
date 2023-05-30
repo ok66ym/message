@@ -1,0 +1,32 @@
+<header>
+    <h1>新規作成</h1>
+    <div class="mypage-new">
+    <% if user_signed_in? %>
+        <%= link_to "マイページへ", user_path(current_user.id) %>
+        <% end %>
+    </div>
+</header>
+
+<div class="top-new">
+    <%= link_to "トップページへ", posts_path %>
+</div>
+
+<div class="new-list">
+  <%= form_for @post do |f| %>
+    <div class ="field">
+      <%= f.label :"題名" %>
+      <%= f.text_field :title, :size => 110 %>
+    </div>
+    <div class ="field">
+      <%= f.label :"ジャンル" %>
+      <%= f.text_field :genre, :size => 110 %>
+    </div>
+    <div class ="field">
+      <%= f.label :"投稿内容" %>
+      <%= f.text_field :body, :size => 110 %>
+    </div>
+    <div class="qa-submit">
+      <%= f.submit "投稿する" %>
+    <% end %>
+    </div>
+</div>

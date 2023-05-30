@@ -1,0 +1,98 @@
+// Place all the styles related to the rooms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.chat-header {
+  background-color: #FFAF3B;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chat-header h1 {
+  padding-left: 30px;
+}
+.chat-header a {
+  text-decoration: none;
+  color: black;
+  padding-right: 30px;
+}
+.chat-header a:hover {
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+.search-new-chat {
+  border: 1px solid;
+  border-color: #707070;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+.search-chat {
+  padding-left: 30px;
+}
+.group-new {
+  padding-right: 30px;
+}
+.group-new a {
+  text-decoration: none;
+  color: black;
+}
+.group-new a:hover {
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+p {
+  padding-left: 30px;
+}
+.group-all {
+  border: 1px solid;
+  border-color: #707070;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  min-height: 90px;
+  margin-top: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 5px #c7c7c7;
+  margin-bottom: 50px;
+}
+.group-all h3 {
+  border: 1px solid;
+  border-color: #707070;
+  padding-left: 0.5%;
+  padding-right: 300px;
+  border-radius: 10px;
+}
+.group-list-table {
+  display: flex;
+  flex-direction: column;
+
+}
+.group-list-table-each-group {
+  border: 1px solid;
+  border-color: #707070;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.group-list-table-each-group a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: black;
+}
+.group-list-table-each-group a:hover {
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+.evening-image {
+  height: 200vh;
+  width: 100%;
+  background-image: url("evening-image.jpg");
+  background-size: contain;
+  background-color:rgba(255,255,255,0.8);
+  background-blend-mode:lighten;
+}

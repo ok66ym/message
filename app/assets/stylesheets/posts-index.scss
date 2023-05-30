@@ -1,0 +1,121 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+header {
+  background-color: #00C5FF;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  color: #FFFFFF;
+  margin-left: 30px;
+}
+header a{
+color: #FFFFFF;
+text-decoration: none;
+margin-right: 30px;
+}
+header a:hover{
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+.top-all {
+  display: flex;
+  justify-content: flex-end;
+}
+.box-1 {
+  border: 1px solid;
+  border-color: #707070;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+.search {
+  color: #000404;
+  margin-left: 15px;
+}
+.new {
+  background-color: #0967F3;
+  margin-right: 10px;
+  font-weight: bold;
+  padding: 0.1%;
+  border-radius: 10px;
+  align-items: center;
+  width: 105px;
+  height: 30px;
+  display: flex;
+}
+.new:hover{
+  background-color: blue;
+}
+.new a {
+  color: #FFFFFF;
+  margin-right: 5px;
+  align-items: center;
+}
+.qa {
+  font-weight: bold;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+.post {
+  border: 1px solid;
+  border-color: #707070;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  min-height: 90px;
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 5px #c7c7c7;
+  margin-bottom: 50px;
+}
+.postshow a {
+  text-decoration: none;
+  color: black;
+}
+.postshow:hover {
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+.postue {
+  display: flex;
+  justify-content: space-between;
+  
+}
+.genre {
+  margin-left: 2%;
+}
+.postshow {
+  margin-right: 2%;
+}
+.postsita {
+  margin-left: 92%;
+  text-decoration: none;
+}
+.postsita a {
+  text-decoration: none;
+  color: black;
+}
+.postsita:hover {
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+.sky-image {
+  height: 200vh;
+  width: 100%;
+  background-image: url("sky-image.jpg");
+  background-size: contain;
+  background-color:rgba(255,255,255,0.8);
+  background-blend-mode:lighten;
+}

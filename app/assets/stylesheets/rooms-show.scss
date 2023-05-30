@@ -1,0 +1,74 @@
+.chat-show {
+  background-color: #FFAF3B;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chat-show h1 {
+  padding-left: 30px;
+}
+.chat-show-user {
+  color: black;
+  padding-right: 30px;
+}
+.chat-show-user a {
+  text-decoration: none;
+  color: black;
+}
+.chat-show-user a:hover {
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+.room-show {
+  border: 1px solid;
+  border-color: #707070;
+}
+.room-show h4 {
+  color: black;
+  padding-left: 30px;
+}
+.room-show a {
+  text-decoration: none;
+}
+.room-show h4:hover {
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+.chat-room-show-talk {
+  border: 1px solid;
+  border-color: #707070;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  min-height: 90px;
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 5px #c7c7c7;
+  margin-bottom: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+  font-weight: bold;
+}
+.comment-chat-show {
+  padding-left: 20px;
+  border: 1px solid;
+  border-color: #c7c7c7;
+  border-radius: 20px;
+}
+.comment-select {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+.evening-image {
+  height: 200vh;
+  width: 100%;
+  background-image: url("evening-image.jpg");
+  background-size: contain;
+  background-color:rgba(255,255,255,0.8);
+  background-blend-mode:lighten;
+}

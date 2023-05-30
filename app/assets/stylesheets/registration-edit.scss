@@ -1,0 +1,48 @@
+header {
+  background-color: #00C5FF;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h2 {
+  color: white;
+  padding-left: 30px;
+}
+.user-mypage {
+  border: 1px solid;
+  border-color: #707070;
+  color: black;
+  font-weight: bold;
+}
+.user-mypage a {
+  text-decoration: none;
+  color: black;
+  padding-left: 30px;
+}
+.user-mypage a:hover {
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+.user-information {
+  border: 1px solid;
+  border-color: #707070;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  min-height: 90px;
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 5px #c7c7c7;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+.action {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}

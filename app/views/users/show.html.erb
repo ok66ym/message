@@ -1,0 +1,44 @@
+<header>
+    <h1>ユーザーページ</h1>
+    <div class="logout">
+      <%= link_to 'ログアウトする', destroy_user_session_path, method: :delete %>
+    </div>
+</header>
+<div class="unlocktop">
+<%= link_to "トップページへ", posts_path %>
+</div>
+<div class="userpage-all">
+  <div class="college-edit">
+    <div class="college-show">
+    <p>大学 : <%= @user.university %></p>
+    </div>
+    <div class="user-edit">
+      <% if current_user.id == @user.id %>
+        <%= link_to "ユーザーページ編集へ", edit_user_registration_path %>
+      <% end %>
+    </div>
+  </div>
+    <div class="information">
+    <p>学部 : <%= @user.undergraduate %></p>
+    <p>学科 : <%= @user.department %></p>
+    <p>学年 : <%= @user.schoolcount %></p>
+    <p>名前 : <%= @user.name %></p>
+    <p>メールアドレス : <%= @user.email %></p>
+    </div>
+</div>
+<div class="throw-iine">
+  <div class="throw-all">
+    <h2>ユーザーの投稿一覧</h2>
+      <% @user.posts.each do |t| %>
+      <%= t.title %>
+      <%= t.genre %>
+      <% end %>
+  </div>
+  <div class="iine-all">
+    <h2>ユーザーがいいねした投稿一覧</h2>
+      <% @user.liked_posts.each do |t| %>
+      <%= t.title %>
+      <%= t.genre %>
+      <% end %>
+  </div>
+</div>

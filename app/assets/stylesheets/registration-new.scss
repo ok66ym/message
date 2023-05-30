@@ -1,0 +1,29 @@
+header {
+  background-color: #00C5FF;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h2 {
+  color: white;
+  padding-left: 150px;
+}
+.signup {
+  border: 1px solid;
+  border-color: #707070;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  min-height: 90px;
+  margin-top: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 5px #c7c7c7;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}

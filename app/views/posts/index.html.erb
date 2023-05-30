@@ -1,0 +1,52 @@
+<! DOCTYPE html>
+<header>
+    <h1>Q&A トップページ</h1>
+        <div class="top-all">
+        <% if user_signed_in? %>
+        <%= link_to "マイページへ", user_path(current_user.id) %>
+        <% end %>
+        <%= link_to "トップページへ", root_path %>
+        </div>
+</header>
+    
+    <div class="sky-image">
+        <div class="box-1">
+            <div class="search">
+            <%= form_tag({controller:"posts",action:"index"}, method: :get) do %>
+            <%= text_field_tag :search %>
+            <%= submit_tag '検索する' %>
+            <% end %>
+            </div>
+        <div class="new">
+        <h4><%= link_to "質問作成へ", new_post_path %></h4>
+        </div>
+        </div>
+
+        <div class="posts-container">
+
+            <div class="qa">
+                <% @posts.each do |t| %>
+                <div class="post">
+                    <div class="postue">
+                    <div class="genre">
+                    <%= t.genre %>
+                    </div>
+                    <div class="postshow">
+                    <%= link_to "詳細へ", post_path(t.id) %>
+                    </div>
+                    </div>
+                    <div class="body">
+                    <%= t.body %>
+                    </div>
+                    <div class="postsita">
+                    <% if user_signed_in? && current_user.id == t.user_id %>
+                        <%= link_to "編集する", edit_post_path(t.id) %>
+                    <% end %>
+                    </div>
+                    </div>
+                    <% end %> 
+            </div>
+        </div>
+    </div>
+    
+

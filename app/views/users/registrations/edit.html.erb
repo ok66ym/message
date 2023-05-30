@@ -1,0 +1,79 @@
+<header>
+    <h2><%= resource_name.to_s.humanize %> 情報編集ページ</h2>
+  <div class="acount-delete">
+    <%= link_to "アカウントを削除する", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
+  </div>
+</header>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "users/shared/error_messages", resource: resource %>
+<div class="user-mypage">
+    <% if user_signed_in? %>
+      <%= link_to "マイページへ", user_path(current_user.id) %>
+    <% end %>
+</div
+
+<!--アカウント編集時に大学、学部、学科、学年、名前を入力できるようにフォームを追加-->
+<div class="user-information">
+  <div class="user-detail">  
+  <div class="field">
+    <%= f.label :"大学" %><br />
+    <%= f.text_field :university, autofocus: true, autocomplete: "university" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :"学部" %><br />
+    <%= f.text_field :undergraduate, autofocus: true, autocomplete: "undergraduate" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :"学科" %><br />
+    <%= f.text_field :department, autofocus: true, autocomplete: "department" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :"回生" %><br />
+    <%= f.text_field :schoolcount, autofocus: true, autocomplete: "class" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :"名前" %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  </div>
+</div>
+<div class="mail-passward">
+  <div class="field">
+    <%= f.label :"メールアドレス" %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :"新規パスワード" %> <i>(変更がなければ入力しないでください)</i><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+    <% if @minimum_password_length %>
+      <br />
+      <em><%= @minimum_password_length %> characters minimum</em>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= f.label :"新規パスワード確認用" %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :"現在のパスワード" %> <i>(現在のパスワードを入力してください)</i><br />
+    <%= f.password_field :current_password, autocomplete: "current-password" %>
+  </div>
+</div>
+  <div class="actions">
+    <%= f.submit "変更する" %>
+  </div>
+  <% end %>
+</div>
+
+<%= link_to "戻る", :back %>

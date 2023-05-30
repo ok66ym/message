@@ -1,0 +1,14 @@
+<header>
+  <div class="comment-edit">
+    <h1>コメント編集ページ</h1>
+</header>
+
+  <%= link_to "投稿詳細ページへ", post_path(@post.id), class:"to-detail" %>
+
+<div class="edit-comment">
+<%= form_for(@comment, url: post_comment_path(@comment)) do |f| %>
+  <%= f.label :コメント内容, :size => 100 %>
+  <%= f.text_field :content, :size => 100 %>
+  <%= f.submit "編集する" %>
+<% end %>
+</div>

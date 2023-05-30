@@ -1,0 +1,41 @@
+<header>
+    <h1>To Doリスト</h1>
+    <% if user_signed_in? %>
+        <%= link_to "マイページへ", user_path(current_user.id) %>
+    <% end %>
+</header>
+
+<div class="edit-detail">
+    <%= link_to "詳細へ", post_path(@post.id) %>
+</div>
+
+<div class="edit-all">
+  <%= form_for @post do |f| %>
+    <div class="edit-title">
+      <%= f.label :タイトル, :size => 150 %>
+    </div>
+    <div class="edit-title-field">
+      <%= f.text_field :title, :size => 150 %>
+    </div>
+    <div class="edit-genre">
+      <%= f.label :ジャンル・キーワード, :size => 150 %>
+    </div>
+    <div class="edit-genre-field">
+      <%= f.text_field :genre, :size => 150 %>
+    </div>
+    <div class="edit-body">
+      <%= f.label :投稿内容, :size => 150 %>
+    </div>
+    <div class="edit-body-field">
+      <%= f.text_field :body, :size => 150 %>
+    </div>
+    <div class="edit-select">
+      <%= f.submit "編集する" %>
+    </div>
+</div>
+<div class="qa-delete">
+  <% if user_signed_in? && current_user.id == @post.user_id %>
+  <%= button_to "投稿を削除する", post_path(@post.id), method: :delete %>
+  <% end %>
+  <% end %>
+</div>
